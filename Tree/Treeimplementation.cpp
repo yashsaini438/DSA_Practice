@@ -47,6 +47,28 @@ int isEmpty(struct queue *q){
     return q->front==q->rear;
 }
 
+void Preorder(struct Node *p){
+    if(p!=NULL){
+        cout<<p->data<<" ";
+        Preorder(p->lchild);
+        Preorder(p->rchild);
+    }
+}
+void Postorder(struct Node *p){
+    if(p!=NULL){
+        Postorder(p->lchild);
+        Postorder(p->rchild);
+        cout<<p->data<<" ";
+    }
+}
+void Inorder(struct Node *p){
+    if(p!=NULL){
+        Inorder(p->lchild);
+        cout<<p->data<<" ";
+        Inorder(p->rchild);
+    }
+}
+
 void Treecreate(){
     struct Node *p,*t;
     int x;
@@ -84,5 +106,15 @@ void Treecreate(){
 
 int main(){
     Treecreate();
+    cout<<"Postorder : ";
+    Postorder(root);
+    cout<<endl;
+    cout<<"Preorder : ";
+    Preorder(root);
+    cout<<endl;
+    cout<<"Inorder : ";
+    Inorder(root);
+    cout<<endl;
+
     return 0;
 }
