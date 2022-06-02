@@ -1,3 +1,4 @@
+#include"TreeDS.h"
 void Preorder(struct Node *p){
     if(p!=NULL){
         cout<<p->data<<" ";
