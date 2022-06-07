@@ -76,6 +76,7 @@ void Treecreate(){
     create(&q,100);
     cout<<"Enter the root value : ";
     cin>>x;
+    fflush(stdin);
     root=(struct Node *)malloc(sizeof(Node));
     root->data=x;
     root->lchild=root->rchild=NULL;
@@ -91,7 +92,7 @@ void Treecreate(){
             p->lchild=t;
             enqueue(&q,t);
         }
-        cout<<"Enter value of "<<p->data<<"'s"<<"rchild: ";
+        cout<<"Enter value of "<<p->data<<"'s "<<"rchild: ";
         cin>>x;
         if(x!=-1){
             t=(struct Node *)malloc(sizeof(Node));
