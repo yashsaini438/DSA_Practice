@@ -85,6 +85,7 @@ void Treecreate(){
         p=dequeue(&q);
         cout<<"Enter value of "<<p->data<<"'s "<<"lchild: ";
         cin>>x;
+        fflush(stdin);
         if(x!=-1){
             t=(struct Node *)malloc(sizeof(Node));
             t->data=x;
@@ -94,6 +95,7 @@ void Treecreate(){
         }
         cout<<"Enter value of "<<p->data<<"'s "<<"rchild: ";
         cin>>x;
+        fflush(stdin);
         if(x!=-1){
             t=(struct Node *)malloc(sizeof(Node));
             t->data=x;

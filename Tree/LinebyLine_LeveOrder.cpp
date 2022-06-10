@@ -1,5 +1,8 @@
 #include"TreeDS.h"
 #include<queue>
+
+// Using the pushing NUll method with T=O(n+h)
+
 void printLevelorderLine(Node *root){
     if(root==NULL) return;
     std :: queue<struct Node*> q;
